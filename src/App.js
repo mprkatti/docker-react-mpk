@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        Hi there ! Finally on elastic beanstalk
+        Hi there ! i was changed on feature branch
         </p>
         <a
           className="App-link"
