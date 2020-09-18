@@ -7,5 +7,15 @@
       - "docker run -e CI=true mprkatti/docker-react-mpk  npm run test"
     services: 
       - docker
-      
-    
+
+    deploy:
+        provider: elasticbeanstalk
+        region: "us-east-1"
+        app: "docker-react"
+        env: "DockerReact-env-1"
+        bucket_name: "elasticbeanstalk-us-east-1-553203812108"
+        bucket_path: "docker-react"
+        on:
+            branch: master
+        access_key_id: $aws_access_key_id
+        secret_access_key: "$aws_secret_access_key"    
